@@ -1,5 +1,6 @@
 package com.reslit.dsiscenopsispotatomod;
 
+import com.reslit.dsiscenopsispotatomod.entity.ModEntities;
 import com.reslit.dsiscenopsispotatomod.item.ModItems;
 
 import com.mojang.logging.LogUtils;
@@ -30,6 +31,7 @@ public class DsiScenopsisPotatoMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.ITEMS.register(modEventBus);
+        ModEntities.ENTITIES.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);

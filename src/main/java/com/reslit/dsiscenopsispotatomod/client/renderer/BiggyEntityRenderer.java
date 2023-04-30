@@ -9,7 +9,7 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 
 public class BiggyEntityRenderer extends MobRenderer<BiggyEntity, BiggyEntityModel> {
-    private static final ResourceLocation TEXTURE = new ResourceLocation(DsiScenopsisPotatoMod.MODID, "textures/entities/biggy_entity.png");
+    private static final ResourceLocation TEXTURE = new ResourceLocation(DsiScenopsisPotatoMod.MODID, "textures/entity/biggy_entity.png");
     public BiggyEntityRenderer(EntityRendererProvider.Context ctx) {
         super(ctx, new BiggyEntityModel(ctx.bakeLayer(BiggyEntityModel.LAYER_LOCATION)), 0.5f);
     }

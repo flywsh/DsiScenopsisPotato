@@ -1,4 +1,4 @@
-package com.event;
+package com.reslit.dsiscenopsispotatomod.event;
 
 import com.reslit.dsiscenopsispotatomod.DsiScenopsisPotatoMod;
 import com.reslit.dsiscenopsispotatomod.entity.BiggyEntity;

@@ -33,12 +33,13 @@ public class BiggyEntity extends Animal {
 
     @Override
     protected void registerGoals() {
-         this.goalSelector.addGoal(0, new FloatGoal(this));
-         this.goalSelector.addGoal(1, new PanicGoal(this, 1.25D));
+        // this.goalSelector.addGoal(2, new ZombieAttackGoal(null, BASE_TICKS_REQUIRED_TO_FREEZE, blocksBuilding))
+         this.goalSelector.addGoal(0, new LookAtPlayerGoal(this, Player.class, 6.0F));
+         this.goalSelector.addGoal(1, new FloatGoal(this));
+         this.goalSelector.addGoal(2, new PanicGoal(this, 1.25D));
          this.goalSelector.addGoal(3, new BreedGoal(this, 1.0D));
          this.goalSelector.addGoal(5, new FollowParentGoal(this, 1.1D));
          this.goalSelector.addGoal(6, new WaterAvoidingRandomStrollGoal(this, 1.0D));
-         this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, 6.0F));
          this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
     }
 

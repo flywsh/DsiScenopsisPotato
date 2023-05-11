@@ -2,7 +2,7 @@ package com.reslit.dsiscenopsispotatomod;
 
 import com.reslit.dsiscenopsispotatomod.entity.ModEntities;
 import com.reslit.dsiscenopsispotatomod.item.ModItems;
-
+import com.reslit.dsiscenopsispotatomod.server.command.RegisterCommandEvent;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -48,6 +48,7 @@ public class DsiScenopsisPotatoMod
         // Some common setup code
         LOGGER.info("## HELLO FROM COMMON SETUP");
         // LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
+        MinecraftForge.EVENT_BUS.register(RegisterCommandEvent.class);
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event)

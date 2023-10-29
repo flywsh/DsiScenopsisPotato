@@ -7,7 +7,7 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.CreativeModeTabEvent;
+// import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -40,7 +40,7 @@ public class DsiScenopsisPotatoMod
         MinecraftForge.EVENT_BUS.register(this);
 
         // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
+        // modEventBus.addListener(this::addCreative);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -51,16 +51,16 @@ public class DsiScenopsisPotatoMod
         MinecraftForge.EVENT_BUS.register(RegisterCommandEvent.class);
     }
 
-    private void addCreative(CreativeModeTabEvent.BuildContents event)
-    {
-        LOGGER.info("## inside addCreative");
-        LOGGER.info("## inside addCreative2");
-        //if (event.getTab() == CreativeModeTabs.INVENTORY) {
-            LOGGER.info("## in addCreative, accept example_item (before)");
-            event.accept(ModItems.EXAMPLE_ITEM);
-            LOGGER.info("## in addCreative, accept example_item");
-        //}
-    }
+    // private void addCreative(CreativeModeTabEvent.BuildContents event)
+    // {
+    //     LOGGER.info("## inside addCreative");
+    //     LOGGER.info("## inside addCreative2");
+    //     //if (event.getTab() == CreativeModeTabs.INVENTORY) {
+    //         LOGGER.info("## in addCreative, accept example_item (before)");
+    //         event.accept(ModItems.EXAMPLE_ITEM);
+    //         LOGGER.info("## in addCreative, accept example_item");
+    //     //}
+    // }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
